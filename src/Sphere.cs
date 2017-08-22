@@ -29,7 +29,7 @@ namespace ExampleMod
       public bool TryDoCommand(Players.Player causedBy, string chattext)
       {
         if (causedBy != null) {
-          foreach (string permission in new string[] { "emperor", "coder", "godemperor", "god" }) {
+          foreach (string permission in new string[] { "mods.scarabol.sphere.create" }) {
             if (PermissionsManager.CheckAndWarnPermission(causedBy, permission)) {
               var m = Regex.Match(chattext, @"/sphere (?<px>-?\d+) (?<py>-?\d+) (?<pz>-?\d+) (?<r>\d+) (?<mat>.+)");
               if (m.Success) {
